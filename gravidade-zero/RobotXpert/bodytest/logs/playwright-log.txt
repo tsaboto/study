@@ -1,0 +1,16 @@
+{"level":30,"time":"2021-11-01T01:08:06.602Z","pid":96291,"hostname":"MacBook-Pro","msg":"Listening on 50651"}
+{"level":30,"time":"2021-11-01T01:08:06.892Z","pid":96291,"hostname":"MacBook-Pro","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2021-11-01T01:08:06.921Z","pid":96291,"hostname":"MacBook-Pro","msg":"Changed active context"}
+{"level":30,"time":"2021-11-01T01:08:07.453Z","pid":96291,"hostname":"MacBook-Pro","msg":"Video path: undefined"}
+{"level":30,"time":"2021-11-01T01:08:07.453Z","pid":96291,"hostname":"MacBook-Pro","msg":"Changed active page"}
+{"level":30,"time":"2021-11-01T01:08:07.896Z","pid":96291,"hostname":"MacBook-Pro","msg":"Strict mode is enabled, find Locator with css=input[name=email] in page."}
+{"level":30,"time":"2021-11-01T01:08:07.918Z","pid":96291,"hostname":"MacBook-Pro","msg":"Strict mode is enabled, find Locator with css=input[name=password] in page."}
+{"level":30,"time":"2021-11-01T01:08:07.927Z","pid":96291,"hostname":"MacBook-Pro","msg":"Strict mode is enabled, find Locator with text=Entrar in page."}
+{"level":30,"time":"2021-11-01T01:08:07.967Z","pid":96291,"hostname":"MacBook-Pro","msg":"Strict mode is enabled, find Locator with css=form span >> text=O e-mail é obrigatório in page."}
+{"level":30,"time":"2021-11-01T01:08:07.970Z","pid":96291,"hostname":"MacBook-Pro","msg":"Strict mode is enabled, find Locator with css=form span >> text=A senha é obrigatória in page."}
+{"level":30,"time":"2021-11-01T01:08:08.063Z","pid":96291,"hostname":"MacBook-Pro","msg":"Changed active context"}
+{"level":30,"time":"2021-11-01T01:08:08.063Z","pid":96291,"hostname":"MacBook-Pro","msg":"Changing current active page"}
+{"level":30,"time":"2021-11-01T01:08:08.063Z","pid":96291,"hostname":"MacBook-Pro","msg":"Changed active page"}
+{"level":30,"time":"2021-11-01T01:08:08.068Z","pid":96291,"hostname":"MacBook-Pro","msg":"Changed active context"}
+{"level":30,"time":"2021-11-01T01:08:08.068Z","pid":96291,"hostname":"MacBook-Pro","msg":"Changing current active page"}
+{"level":30,"time":"2021-11-01T01:08:08.068Z","pid":96291,"hostname":"MacBook-Pro","msg":"Changed active page"}

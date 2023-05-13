@@ -1,0 +1,25 @@
+{"level":30,"time":"2023-04-17T19:28:37.059Z","pid":53049,"hostname":"TatiSaboto.attlocal.net","msg":"Listening on 62733"}
+{"level":30,"time":"2023-04-17T19:28:37.767Z","pid":53049,"hostname":"TatiSaboto.attlocal.net","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2023-04-17T19:28:37.778Z","pid":53049,"hostname":"TatiSaboto.attlocal.net","msg":"Changed active context"}
+{"level":30,"time":"2023-04-17T19:28:38.384Z","pid":53049,"hostname":"TatiSaboto.attlocal.net","msg":"Video path: undefined"}
+{"level":30,"time":"2023-04-17T19:28:38.384Z","pid":53049,"hostname":"TatiSaboto.attlocal.net","msg":"Changed active page"}
+{"level":30,"time":"2023-04-17T19:28:40.507Z","pid":53049,"hostname":"TatiSaboto.attlocal.net","msg":"Strict mode is enabled, find Locator with xpath=//*[@id = \"nav-logo-sprites\"] in page."}
+{"level":30,"time":"2023-04-17T19:28:40.546Z","pid":53049,"hostname":"TatiSaboto.attlocal.net","msg":"Strict mode is enabled, find Locator with //*[@type= \"text\"] in page."}
+{"level":30,"time":"2023-04-17T19:28:40.582Z","pid":53049,"hostname":"TatiSaboto.attlocal.net","msg":"Strict mode is enabled, find Locator with xpath=//span[@id= \"nav-search-submit-text\"] in page."}
+{"level":30,"time":"2023-04-17T19:28:40.909Z","pid":53049,"hostname":"TatiSaboto.attlocal.net","msg":"Strict mode is enabled, find Locator with xpath=(//a[@class= \"a-link-normal s-underline-text s-underline-link-text s-link-style a-text-normal\"])[1] in page."}
+{"level":30,"time":"2023-04-17T19:28:41.975Z","pid":53049,"hostname":"TatiSaboto.attlocal.net","msg":"Strict mode is enabled, find Locator with xpath=//input[@name= \"submit.add-to-cart\"] in page."}
+{"level":30,"time":"2023-04-17T19:28:43.399Z","pid":53049,"hostname":"TatiSaboto.attlocal.net","msg":"Strict mode is enabled, find Locator with xpath= //span[@class= \"a-size-medium-plus a-color-base sw-atc-text a-text-bold\"] >> text=\"Added to Cart\" in page."}
+{"level":30,"time":"2023-04-17T19:28:43.712Z","pid":53049,"hostname":"TatiSaboto.attlocal.net","msg":"Strict mode is enabled, find Locator with xpath=//span[@id= \"nav-cart-count\"] in page."}
+{"level":30,"time":"2023-04-17T19:28:43.768Z","pid":53049,"hostname":"TatiSaboto.attlocal.net","msg":"Retrieved text for element xpath=//span[@id= \"nav-cart-count\"] containing 1"}
+{"level":30,"time":"2023-04-17T19:28:43.781Z","pid":53049,"hostname":"TatiSaboto.attlocal.net","msg":"Strict mode is enabled, find Locator with xpath=//span[@class= \"nav-cart-icon nav-sprite\"] in page."}
+{"level":30,"time":"2023-04-17T19:28:44.226Z","pid":53049,"hostname":"TatiSaboto.attlocal.net","msg":"Strict mode is enabled, find Locator with xpath=//div[@class= \"a-row sc-cart-header sc-compact-bottom\"] in page."}
+{"level":30,"time":"2023-04-17T19:28:44.388Z","pid":53049,"hostname":"TatiSaboto.attlocal.net","msg":"Strict mode is enabled, find Locator with xpath=//h1 in page."}
+{"level":30,"time":"2023-04-17T19:28:44.458Z","pid":53049,"hostname":"TatiSaboto.attlocal.net","msg":"Retrieved text for element xpath=//h1 containing Shopping Cart"}
+{"level":30,"time":"2023-04-17T19:28:44.461Z","pid":53049,"hostname":"TatiSaboto.attlocal.net","msg":"Strict mode is enabled, find Locator with xpath=//span[@class= \"a-size-medium a-color-base sc-price sc-white-space-nowrap sc-product-price a-text-bold\"] in page."}
+{"level":30,"time":"2023-04-17T19:28:44.467Z","pid":53049,"hostname":"TatiSaboto.attlocal.net","msg":"Retrieved text for element xpath=//span[@class= \"a-size-medium a-color-base sc-price sc-white-space-nowrap sc-product-price a-text-bold\"] containing $299.99"}
+{"level":30,"time":"2023-04-17T19:28:44.956Z","pid":53049,"hostname":"TatiSaboto.attlocal.net","msg":"Changed active context"}
+{"level":30,"time":"2023-04-17T19:28:44.956Z","pid":53049,"hostname":"TatiSaboto.attlocal.net","msg":"Changing current active page"}
+{"level":30,"time":"2023-04-17T19:28:44.956Z","pid":53049,"hostname":"TatiSaboto.attlocal.net","msg":"Changed active page"}
+{"level":30,"time":"2023-04-17T19:28:44.964Z","pid":53049,"hostname":"TatiSaboto.attlocal.net","msg":"Changed active context"}
+{"level":30,"time":"2023-04-17T19:28:44.964Z","pid":53049,"hostname":"TatiSaboto.attlocal.net","msg":"Changing current active page"}
+{"level":30,"time":"2023-04-17T19:28:44.964Z","pid":53049,"hostname":"TatiSaboto.attlocal.net","msg":"Changed active page"}

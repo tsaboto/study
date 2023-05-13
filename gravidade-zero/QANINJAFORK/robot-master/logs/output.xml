@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.9.7 on darwin)" generated="20211102 13:45:03.224" rpa="false" schemaversion="2">
+<suite id="s1" name="Get User" source="/Users/tatianesaboto/Documents/QANINJAFORK/robot-master/specs/api/get_user.robot">
+<test id="s1-t1" name="Consulte an user">
+<kw name="Convert To String" library="BuiltIn">
+<var>${user_id}</var>
+<arg>1</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20211102 13:45:03.264" level="INFO">${user_id} = 1</msg>
+<status status="PASS" starttime="20211102 13:45:03.264" endtime="20211102 13:45:03.264"/>
+</kw>
+<kw name="Get User" library="base_api">
+<var>${response}</var>
+<arg>${user_id}</arg>
+<kw name="Get Token" library="base_api">
+<var>${token}</var>
+<kw name="Create Session" library="RequestsLibrary">
+<arg>nplus</arg>
+<arg>${BASE_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20211102 13:45:03.265" level="INFO">Creating Session using : alias=nplus, url=http://ninjaplus-api:3000, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20211102 13:45:03.265" endtime="20211102 13:45:03.265"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>&amp;{body}</var>
+<arg>email=estanqueiro@ninjaplus.com</arg>
+<arg>password=pwd123</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20211102 13:45:03.265" level="INFO">&amp;{body} = { email=estanqueiro@ninjaplus.com | password=pwd123 }</msg>
+<status status="PASS" starttime="20211102 13:45:03.265" endtime="20211102 13:45:03.265"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>&amp;{headers}</var>
+<arg>Content-Type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20211102 13:45:03.265" level="INFO">&amp;{headers} = { Content-Type=application/json }</msg>
+<status status="PASS" starttime="20211102 13:45:03.265" endtime="20211102 13:45:03.265"/>
+</kw>
+<kw name="Post Request" library="RequestsLibrary">
+<var>${response}</var>
+<arg>nplus</arg>
+<arg>/auth</arg>
+<arg>data=${body}</arg>
+<arg>headers=${headers}</arg>
+<doc>*DEPRECATED* Please use `POST On Session` instead.</doc>
+<msg timestamp="20211102 13:45:03.265" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20211102 13:45:03.294" level="WARN">Retrying (RetryAdapter(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x10233bbb0&gt;: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /auth</msg>
+<msg timestamp="20211102 13:45:03.501" level="WARN">Retrying (RetryAdapter(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x10233bca0&gt;: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /auth</msg>
+<msg timestamp="20211102 13:45:03.907" level="WARN">Retrying (RetryAdapter(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x10233bf40&gt;: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /auth</msg>
+<msg timestamp="20211102 13:45:03.915" level="FAIL">ConnectionError: HTTPConnectionPool(host='ninjaplus-api', port=3000): Max retries exceeded with url: /auth (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x102372190&gt;: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))</msg>
+<status status="FAIL" starttime="20211102 13:45:03.265" endtime="20211102 13:45:03.915"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${response.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20211102 13:45:03.915" endtime="20211102 13:45:03.916"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${token}</var>
+<arg>JWT ${response.json()['token']}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="NOT RUN" starttime="20211102 13:45:03.916" endtime="20211102 13:45:03.916"/>
+</kw>
+<status status="FAIL" starttime="20211102 13:45:03.265" endtime="20211102 13:45:03.917"/>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<arg>nplus</arg>
+<arg>${BASE_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="NOT RUN" starttime="20211102 13:45:03.917" endtime="20211102 13:45:03.917"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>&amp;{headers}</var>
+<arg>Content-Type=application/json</arg>
+<arg>Authorization=${token}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="NOT RUN" starttime="20211102 13:45:03.917" endtime="20211102 13:45:03.917"/>
+</kw>
+<kw name="Get Request" library="RequestsLibrary">
+<var>${response}</var>
+<arg>nplus</arg>
+<arg>/user/${user_id}</arg>
+<arg>headers=${headers}</arg>
+<doc>*DEPRECATED* Please use `GET On Session` instead.</doc>
+<msg timestamp="20211102 13:45:03.917" level="WARN">Keyword 'RequestsLibrary.Get Request' is deprecated. Please use `GET On Session` instead.</msg>
+<status status="NOT RUN" starttime="20211102 13:45:03.917" endtime="20211102 13:45:03.918"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${response.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20211102 13:45:03.918" endtime="20211102 13:45:03.918"/>
+</kw>
+<status status="FAIL" starttime="20211102 13:45:03.264" endtime="20211102 13:45:03.918"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${code}</var>
+<arg>${response.status_code}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="NOT RUN" starttime="20211102 13:45:03.919" endtime="20211102 13:45:03.919"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${code}</arg>
+<arg>200</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" starttime="20211102 13:45:03.919" endtime="20211102 13:45:03.919"/>
+</kw>
+<kw name="Dictionary Should Contain Value" library="Collections">
+<arg>${response.json()}</arg>
+<arg>Estanqueiro</arg>
+<doc>Fails if ``value`` is not found from ``dictionary``.</doc>
+<status status="NOT RUN" starttime="20211102 13:45:03.919" endtime="20211102 13:45:03.919"/>
+</kw>
+<kw name="Dictionary Should Contain Value" library="Collections">
+<arg>${response.json()}</arg>
+<arg>estanqueiro@ninjaplus.com</arg>
+<doc>Fails if ``value`` is not found from ``dictionary``.</doc>
+<status status="NOT RUN" starttime="20211102 13:45:03.919" endtime="20211102 13:45:03.919"/>
+</kw>
+<status status="FAIL" starttime="20211102 13:45:03.264" endtime="20211102 13:45:03.919">ConnectionError: HTTPConnectionPool(host='ninjaplus-api', port=3000): Max retries exceeded with url: /auth (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x102372190&gt;: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))</status>
+</test>
+<test id="s1-t2" name="User not found">
+<kw name="Convert To String" library="BuiltIn">
+<var>${user_id}</var>
+<arg>9999</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20211102 13:45:03.920" level="INFO">${user_id} = 9999</msg>
+<status status="PASS" starttime="20211102 13:45:03.920" endtime="20211102 13:45:03.920"/>
+</kw>
+<kw name="Get User" library="base_api">
+<var>${response}</var>
+<arg>${user_id}</arg>
+<kw name="Get Token" library="base_api">
+<var>${token}</var>
+<kw name="Create Session" library="RequestsLibrary">
+<arg>nplus</arg>
+<arg>${BASE_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20211102 13:45:03.922" level="INFO">Creating Session using : alias=nplus, url=http://ninjaplus-api:3000, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20211102 13:45:03.921" endtime="20211102 13:45:03.922"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>&amp;{body}</var>
+<arg>email=estanqueiro@ninjaplus.com</arg>
+<arg>password=pwd123</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20211102 13:45:03.922" level="INFO">&amp;{body} = { email=estanqueiro@ninjaplus.com | password=pwd123 }</msg>
+<status status="PASS" starttime="20211102 13:45:03.922" endtime="20211102 13:45:03.922"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>&amp;{headers}</var>
+<arg>Content-Type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20211102 13:45:03.923" level="INFO">&amp;{headers} = { Content-Type=application/json }</msg>
+<status status="PASS" starttime="20211102 13:45:03.922" endtime="20211102 13:45:03.923"/>
+</kw>
+<kw name="Post Request" library="RequestsLibrary">
+<var>${response}</var>
+<arg>nplus</arg>
+<arg>/auth</arg>
+<arg>data=${body}</arg>
+<arg>headers=${headers}</arg>
+<doc>*DEPRECATED* Please use `POST On Session` instead.</doc>
+<msg timestamp="20211102 13:45:03.923" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20211102 13:45:03.947" level="WARN">Retrying (RetryAdapter(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x1023f0790&gt;: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /auth</msg>
+<msg timestamp="20211102 13:45:04.151" level="WARN">Retrying (RetryAdapter(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x1023f0940&gt;: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /auth</msg>
+<msg timestamp="20211102 13:45:04.559" level="WARN">Retrying (RetryAdapter(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x1023f0b50&gt;: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /auth</msg>
+<msg timestamp="20211102 13:45:04.563" level="FAIL">ConnectionError: HTTPConnectionPool(host='ninjaplus-api', port=3000): Max retries exceeded with url: /auth (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x1023f0d60&gt;: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))</msg>
+<status status="FAIL" starttime="20211102 13:45:03.923" endtime="20211102 13:45:04.563"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${response.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20211102 13:45:04.564" endtime="20211102 13:45:04.564"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${token}</var>
+<arg>JWT ${response.json()['token']}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="NOT RUN" starttime="20211102 13:45:04.564" endtime="20211102 13:45:04.564"/>
+</kw>
+<status status="FAIL" starttime="20211102 13:45:03.921" endtime="20211102 13:45:04.564"/>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<arg>nplus</arg>
+<arg>${BASE_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="NOT RUN" starttime="20211102 13:45:04.564" endtime="20211102 13:45:04.564"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>&amp;{headers}</var>
+<arg>Content-Type=application/json</arg>
+<arg>Authorization=${token}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="NOT RUN" starttime="20211102 13:45:04.564" endtime="20211102 13:45:04.565"/>
+</kw>
+<kw name="Get Request" library="RequestsLibrary">
+<var>${response}</var>
+<arg>nplus</arg>
+<arg>/user/${user_id}</arg>
+<arg>headers=${headers}</arg>
+<doc>*DEPRECATED* Please use `GET On Session` instead.</doc>
+<msg timestamp="20211102 13:45:04.565" level="WARN">Keyword 'RequestsLibrary.Get Request' is deprecated. Please use `GET On Session` instead.</msg>
+<status status="NOT RUN" starttime="20211102 13:45:04.565" endtime="20211102 13:45:04.565"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${response.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20211102 13:45:04.565" endtime="20211102 13:45:04.565"/>
+</kw>
+<status status="FAIL" starttime="20211102 13:45:03.920" endtime="20211102 13:45:04.565"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${code}</var>
+<arg>${response.status_code}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="NOT RUN" starttime="20211102 13:45:04.565" endtime="20211102 13:45:04.565"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${code}</arg>
+<arg>404</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" starttime="20211102 13:45:04.566" endtime="20211102 13:45:04.566"/>
+</kw>
+<status status="FAIL" starttime="20211102 13:45:03.920" endtime="20211102 13:45:04.566">ConnectionError: HTTPConnectionPool(host='ninjaplus-api', port=3000): Max retries exceeded with url: /auth (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x1023f0d60&gt;: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))</status>
+</test>
+<status status="FAIL" starttime="20211102 13:45:03.225" endtime="20211102 13:45:04.566"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="2" skip="0" id="s1" name="Get User">Get User</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20211102 13:45:03.238" level="ERROR">Error in file '/Users/tatianesaboto/Documents/QANINJAFORK/robot-master/specs/api/base_api.robot' on line 3: Importing library '/Users/tatianesaboto/Documents/QANINJAFORK/robot-master/resources/lib/db.py' failed: ModuleNotFoundError: No module named 'psycopg2'
+Traceback (most recent call last):
+  File "/Users/tatianesaboto/Documents/QANINJAFORK/robot-master/resources/lib/db.py", line 1, in &lt;module&gt;
+    import psycopg2
+PYTHONPATH:
+  /opt/homebrew/bin
+  /opt/homebrew/Cellar/python@3.9/3.9.7_1/Frameworks/Python.framework/Versions/3.9/lib/python39.zip
+  /opt/homebrew/Cellar/python@3.9/3.9.7_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9
+  /opt/homebrew/Cellar/python@3.9/3.9.7_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/lib-dynload
+  /opt/homebrew/lib/python3.9/site-packages</msg>
+<msg timestamp="20211102 13:45:03.238" level="ERROR">Error in file '/Users/tatianesaboto/Documents/QANINJAFORK/robot-master/specs/api/base_api.robot' on line 4: Importing library 'JSONLibrary' failed: ModuleNotFoundError: No module named 'JSONLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  /opt/homebrew/bin
+  /opt/homebrew/Cellar/python@3.9/3.9.7_1/Frameworks/Python.framework/Versions/3.9/lib/python39.zip
+  /opt/homebrew/Cellar/python@3.9/3.9.7_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9
+  /opt/homebrew/Cellar/python@3.9/3.9.7_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/lib-dynload
+  /opt/homebrew/lib/python3.9/site-packages</msg>
+<msg timestamp="20211102 13:45:03.265" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20211102 13:45:03.294" level="WARN">Retrying (RetryAdapter(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x10233bbb0&gt;: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /auth</msg>
+<msg timestamp="20211102 13:45:03.501" level="WARN">Retrying (RetryAdapter(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x10233bca0&gt;: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /auth</msg>
+<msg timestamp="20211102 13:45:03.907" level="WARN">Retrying (RetryAdapter(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x10233bf40&gt;: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /auth</msg>
+<msg timestamp="20211102 13:45:03.917" level="WARN">Keyword 'RequestsLibrary.Get Request' is deprecated. Please use `GET On Session` instead.</msg>
+<msg timestamp="20211102 13:45:03.923" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20211102 13:45:03.947" level="WARN">Retrying (RetryAdapter(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x1023f0790&gt;: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /auth</msg>
+<msg timestamp="20211102 13:45:04.151" level="WARN">Retrying (RetryAdapter(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x1023f0940&gt;: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /auth</msg>
+<msg timestamp="20211102 13:45:04.559" level="WARN">Retrying (RetryAdapter(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x1023f0b50&gt;: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /auth</msg>
+<msg timestamp="20211102 13:45:04.565" level="WARN">Keyword 'RequestsLibrary.Get Request' is deprecated. Please use `GET On Session` instead.</msg>
+</errors>
+</robot>

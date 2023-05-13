@@ -1,0 +1,35 @@
+{"level":30,"time":"2021-11-14T17:37:26.432Z","pid":56165,"hostname":"TatiSaboto","msg":"Listening on 62141"}
+{"level":30,"time":"2021-11-14T17:37:27.185Z","pid":56165,"hostname":"TatiSaboto","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2021-11-14T17:37:27.204Z","pid":56165,"hostname":"TatiSaboto","msg":"Changed active context"}
+{"level":30,"time":"2021-11-14T17:37:27.797Z","pid":56165,"hostname":"TatiSaboto","msg":"Video path: undefined"}
+{"level":30,"time":"2021-11-14T17:37:27.797Z","pid":56165,"hostname":"TatiSaboto","msg":"Changed active page"}
+{"level":30,"time":"2021-11-14T17:37:28.325Z","pid":56165,"hostname":"TatiSaboto","msg":"Strict mode is enabled, find Locator with text=Novo in page."}
+{"level":30,"time":"2021-11-14T17:37:28.405Z","pid":56165,"hostname":"TatiSaboto","msg":"Strict mode is enabled, find Locator with css=.card-header-title >> text=Cadastrar novo usuário in page."}
+{"level":30,"time":"2021-11-14T17:37:28.540Z","pid":56165,"hostname":"TatiSaboto","msg":"Strict mode is enabled, find Locator with css=input[name='nome'] in page."}
+{"level":30,"time":"2021-11-14T17:37:28.552Z","pid":56165,"hostname":"TatiSaboto","msg":"Strict mode is enabled, find Locator with css=input[name='email'] in page."}
+{"level":30,"time":"2021-11-14T17:37:28.568Z","pid":56165,"hostname":"TatiSaboto","msg":"Strict mode is enabled, find Locator with css=.ordem select in page."}
+{"level":30,"time":"2021-11-14T17:37:28.581Z","pid":56165,"hostname":"TatiSaboto","msg":"Strict mode is enabled, find Locator with css=input[name='Data de nascimento'] in page."}
+{"level":30,"time":"2021-11-14T17:37:28.616Z","pid":56165,"hostname":"TatiSaboto","msg":"Strict mode is enabled, find Locator with xpath=(//header[@class='datepicker-header']//select)[1] in page."}
+{"level":30,"time":"2021-11-14T17:37:28.623Z","pid":56165,"hostname":"TatiSaboto","msg":"Strict mode is enabled, find Locator with xpath=(//header[@class='datepicker-header']//select)[2] in page."}
+{"level":30,"time":"2021-11-14T17:37:28.639Z","pid":56165,"hostname":"TatiSaboto","msg":"Strict mode is enabled, find Locator with xpath=//a[contains(@class, \"datepicker-cell\")]//span[text()=06] in page."}
+{"level":30,"time":"2021-11-14T17:37:28.685Z","pid":56165,"hostname":"TatiSaboto","msg":"Strict mode is enabled, find Locator with id=insta in page."}
+{"level":30,"time":"2021-11-14T17:37:28.699Z","pid":56165,"hostname":"TatiSaboto","msg":"Strict mode is enabled, find Locator with xpath=//input[@value='Cavaleiro Jedi']/../span[@class='check'] in page."}
+{"level":30,"time":"2021-11-14T17:37:28.732Z","pid":56165,"hostname":"TatiSaboto","msg":"Strict mode is enabled, find Locator with xpath=//input[@name='comunications']/../span[@class='check'] in page."}
+{"level":30,"time":"2021-11-14T17:37:28.852Z","pid":56165,"hostname":"TatiSaboto","msg":"Strict mode is enabled, find Locator with css=button >> text=Cadastrar in page."}
+{"level":30,"time":"2021-11-14T17:37:28.913Z","pid":56165,"hostname":"TatiSaboto","msg":"Strict mode is enabled, find Locator with css=.toast div in page."}
+{"level":30,"time":"2021-11-14T17:37:28.917Z","pid":56165,"hostname":"TatiSaboto","msg":"Strict mode is enabled, find Locator with css=.toast div in page."}
+{"level":30,"time":"2021-11-14T17:37:28.926Z","pid":56165,"hostname":"TatiSaboto","msg":"Retrieved text for element css=.toast div containing Usuário cadastrado com sucesso!"}
+{"level":30,"time":"2021-11-14T17:37:28.927Z","pid":56165,"hostname":"TatiSaboto","msg":"Strict mode is enabled, find Locator with text=Novo in page."}
+{"level":30,"time":"2021-11-14T17:37:28.961Z","pid":56165,"hostname":"TatiSaboto","msg":"Strict mode is enabled, find Locator with css=.card-header-title >> text=Cadastrar novo usuário in page."}
+{"level":30,"time":"2021-11-14T17:37:29.051Z","pid":56165,"hostname":"TatiSaboto","msg":"Strict mode is enabled, find Locator with css=.carousel in page."}
+{"level":30,"time":"2021-11-14T17:37:29.065Z","pid":56165,"hostname":"TatiSaboto","msg":"Strict mode is enabled, find Locator with xpath=//td[contains(text(),'yoda@jedi.com')]/.. in page."}
+{"level":30,"time":"2021-11-14T17:37:29.068Z","pid":56165,"hostname":"TatiSaboto","msg":"Strict mode is enabled, find Locator with xpath=//td[contains(text(),'yoda@jedi.com')]/.. in page."}
+{"level":30,"time":"2021-11-14T17:37:29.073Z","pid":56165,"hostname":"TatiSaboto","msg":"Retrieved text for element xpath=//td[contains(text(),'yoda@jedi.com')]/.. containing  Mestre Yoda\tyoda@jedi.com\t11/6/1984\t@yoda\t"}
+{"level":30,"time":"2021-11-14T17:37:29.074Z","pid":56165,"hostname":"TatiSaboto","msg":"Strict mode is enabled, find Locator with xpath=//td[contains(text(),'yoda@jedi.com')]/.. in page."}
+{"level":30,"time":"2021-11-14T17:37:29.078Z","pid":56165,"hostname":"TatiSaboto","msg":"Retrieved text for element xpath=//td[contains(text(),'yoda@jedi.com')]/.. containing  Mestre Yoda\tyoda@jedi.com\t11/6/1984\t@yoda\t"}
+{"level":30,"time":"2021-11-14T17:37:29.177Z","pid":56165,"hostname":"TatiSaboto","msg":"Changed active context"}
+{"level":30,"time":"2021-11-14T17:37:29.177Z","pid":56165,"hostname":"TatiSaboto","msg":"Changing current active page"}
+{"level":30,"time":"2021-11-14T17:37:29.177Z","pid":56165,"hostname":"TatiSaboto","msg":"Changed active page"}
+{"level":30,"time":"2021-11-14T17:37:29.182Z","pid":56165,"hostname":"TatiSaboto","msg":"Changed active context"}
+{"level":30,"time":"2021-11-14T17:37:29.182Z","pid":56165,"hostname":"TatiSaboto","msg":"Changing current active page"}
+{"level":30,"time":"2021-11-14T17:37:29.182Z","pid":56165,"hostname":"TatiSaboto","msg":"Changed active page"}

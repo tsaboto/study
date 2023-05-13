@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.9.7 on darwin)" generated="20230417 15:28:36.654" rpa="false" schemaversion="2">
+<suite id="s1" name="Tests" source="/Users/tatianesaboto/Documents/Global-e/study/tests">
+<suite id="s1-s1" name="Cart" source="/Users/tatianesaboto/Documents/Global-e/study/tests/cart.robot">
+<test id="s1-s1-t1" name="Buy one item">
+<kw name="Start Session" library="base" type="SETUP">
+<kw name="New Browser" library="Browser">
+<arg>chromium</arg>
+<arg>false</arg>
+<arg>slowMo=00:00:00</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<msg timestamp="20230417 15:28:37.149" level="INFO">{"browser": "chromium", "headless": false, "handleSIGINT": true, "handleSIGTERM": true, "handleSIGHUP": true, "timeout": 30000.0, "devtools": false, "slowMo": 0.0, "tracesDir": "/Users/tatianesaboto/Documents/Global-e/study/logs/browser/traces/88aa6234-ebf6-4c22-91d2-12c4d2534ab1"}</msg>
+<msg timestamp="20230417 15:28:37.765" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"handleSIGINT":true,"handleSIGTERM":true,"handleSIGHUP":true,"timeout":30000,"devtools":false,"slowMo":0,"tracesDir":"/Users/tatianesaboto/Documents/Global-e/study/logs/browser/traces/88aa6234-ebf6-4c22-91d2-12c4d2534ab1"}</msg>
+<status status="PASS" starttime="20230417 15:28:37.148" endtime="20230417 15:28:37.766"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>${BASE_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page. A Page is the Playwright equivalent to a tab.
+See `Browser, Context and Page` for more information about Page concept.
+Returns a stable identifier for the created page.</doc>
+<msg timestamp="20230417 15:28:40.435" level="INFO">Successfully initialized new page object and opened url: https://amazon.com</msg>
+<msg timestamp="20230417 15:28:40.435" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<status status="PASS" starttime="20230417 15:28:37.766" endtime="20230417 15:28:40.435"/>
+</kw>
+<kw name="Set Viewport Size" library="Browser">
+<arg>1024</arg>
+<arg>768</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Sets current Pages viewport size to specified dimensions.</doc>
+<msg timestamp="20230417 15:28:40.505" level="INFO">Set viewport size to: [object Object]</msg>
+<status status="PASS" starttime="20230417 15:28:40.435" endtime="20230417 15:28:40.505"/>
+</kw>
+<status status="PASS" starttime="20230417 15:28:37.148" endtime="20230417 15:28:40.505"/>
+</kw>
+<kw name="Home page is visible" library="actions">
+<kw name="Wait For Elements State" library="Browser">
+<arg>xpath=//*[@id = "nav-logo-sprites"]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20230417 15:28:40.545" level="INFO">Waited for Element with selector xpath=//*[@id = "nav-logo-sprites"] at state visible</msg>
+<status status="PASS" starttime="20230417 15:28:40.505" endtime="20230417 15:28:40.545"/>
+</kw>
+<status status="PASS" starttime="20230417 15:28:40.505" endtime="20230417 15:28:40.545"/>
+</kw>
+<kw name="Select item" library="actions">
+<arg>bike</arg>
+<kw name="Fill Text" library="Browser">
+<arg>//*[@type= "text"]</arg>
+<arg>${item}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230417 15:28:40.546" level="INFO">Fills the text 'bike' in the given field.</msg>
+<status status="PASS" starttime="20230417 15:28:40.545" endtime="20230417 15:28:40.581"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>xpath=//span[@id= "nav-search-submit-text"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230417 15:28:40.581" endtime="20230417 15:28:40.908"/>
+</kw>
+<status status="PASS" starttime="20230417 15:28:40.545" endtime="20230417 15:28:40.908"/>
+</kw>
+<kw name="Insert Item On Cart" library="actions">
+<kw name="Set Variable" library="BuiltIn">
+<var>${css_item}</var>
+<arg>(//a[@class= "a-link-normal s-underline-text s-underline-link-text s-link-style a-text-normal"])[1]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230417 15:28:40.909" level="INFO">${css_item} = (//a[@class= "a-link-normal s-underline-text s-underline-link-text s-link-style a-text-normal"])[1]</msg>
+<status status="PASS" starttime="20230417 15:28:40.909" endtime="20230417 15:28:40.909"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>xpath=${css_item}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230417 15:28:40.909" endtime="20230417 15:28:41.974"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>xpath=//input[@name= "submit.add-to-cart"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230417 15:28:41.975" endtime="20230417 15:28:43.398"/>
+</kw>
+<status status="PASS" starttime="20230417 15:28:40.908" endtime="20230417 15:28:43.398"/>
+</kw>
+<kw name="Validate the insertion in the cart" library="actions">
+<arg>Added to Cart</arg>
+<kw name="Wait For Elements State" library="Browser">
+<arg>xpath= //span[@class= "a-size-medium-plus a-color-base sw-atc-text a-text-bold"] &gt;&gt; text="${text_validation}"</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20230417 15:28:43.711" level="INFO">Waited for Element with selector xpath= //span[@class= "a-size-medium-plus a-color-base sw-atc-text a-text-bold"] &gt;&gt; text="Added to Cart" at state visible</msg>
+<status status="PASS" starttime="20230417 15:28:43.398" endtime="20230417 15:28:43.712"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${texto}</var>
+<arg>xpath=//span[@id= "nav-cart-count"]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20230417 15:28:43.770" level="INFO">${texto} = 1</msg>
+<status status="PASS" starttime="20230417 15:28:43.712" endtime="20230417 15:28:43.770"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${texto}</arg>
+<arg>1</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230417 15:28:43.770" endtime="20230417 15:28:43.770"/>
+</kw>
+<status status="PASS" starttime="20230417 15:28:43.398" endtime="20230417 15:28:43.771"/>
+</kw>
+<kw name="Check item on the cart" library="actions">
+<kw name="Click" library="Browser">
+<arg>xpath=//span[@class= "nav-cart-icon nav-sprite"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230417 15:28:43.771" endtime="20230417 15:28:44.225"/>
+</kw>
+<kw name="Wait For Elements State" library="Browser">
+<arg>xpath=//div[@class= "a-row sc-cart-header sc-compact-bottom"]</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20230417 15:28:44.388" level="INFO">Waited for Element with selector xpath=//div[@class= "a-row sc-cart-header sc-compact-bottom"] at state visible</msg>
+<status status="PASS" starttime="20230417 15:28:44.225" endtime="20230417 15:28:44.388"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${texto}</var>
+<arg>xpath=//h1</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20230417 15:28:44.460" level="INFO">${texto} = Shopping Cart</msg>
+<status status="PASS" starttime="20230417 15:28:44.388" endtime="20230417 15:28:44.460"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${texto}</arg>
+<arg>Shopping Cart</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230417 15:28:44.461" endtime="20230417 15:28:44.461"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${texto_price}</var>
+<arg>xpath=//span[@class= "a-size-medium a-color-base sc-price sc-white-space-nowrap sc-product-price a-text-bold"]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20230417 15:28:44.468" level="INFO">${texto_price} = $299.99</msg>
+<status status="PASS" starttime="20230417 15:28:44.461" endtime="20230417 15:28:44.468"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${texto_price}</arg>
+<arg>299.99</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230417 15:28:44.469" endtime="20230417 15:28:44.469"/>
+</kw>
+<status status="PASS" starttime="20230417 15:28:43.771" endtime="20230417 15:28:44.469"/>
+</kw>
+<kw name="Finish Session" library="base" type="TEARDOWN">
+<kw name="Take Screenshot" library="Browser">
+<arg>fullPage=True</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<msg timestamp="20230417 15:28:44.940" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230417 15:28:44.469" endtime="20230417 15:28:44.940"/>
+</kw>
+<status status="PASS" starttime="20230417 15:28:44.469" endtime="20230417 15:28:44.940"/>
+</kw>
+<status status="PASS" starttime="20230417 15:28:37.146" endtime="20230417 15:28:44.940"/>
+</test>
+<doc>This test will validate a simple cenario to buy one item</doc>
+<status status="PASS" starttime="20230417 15:28:36.665" endtime="20230417 15:28:45.046"/>
+</suite>
+<status status="PASS" starttime="20230417 15:28:36.655" endtime="20230417 15:28:45.048"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Cart">Tests.Cart</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

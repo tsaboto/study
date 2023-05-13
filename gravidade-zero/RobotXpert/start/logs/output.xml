@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.9.7 on darwin)" generated="20211031 14:27:04.636" rpa="false" schemaversion="2">
+<suite id="s1" name="Condicionais" source="/Users/tatianesaboto/Documents/RobotXpert/start/condicionais.robot">
+<test id="s1-t1" name="Navegador">
+<kw name="Set Variable" library="BuiltIn">
+<var>${browser}</var>
+<arg>Chrome</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20211031 14:27:04.645" level="INFO">${browser} = Chrome</msg>
+<status status="PASS" starttime="20211031 14:27:04.644" endtime="20211031 14:27:04.645"/>
+</kw>
+<if>
+<branch type="IF" condition="'${browser}' == 'Firefox'">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Chamando o ${browser}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20211031 14:27:04.645" endtime="20211031 14:27:04.645"/>
+</kw>
+<status status="NOT RUN" starttime="20211031 14:27:04.645" endtime="20211031 14:27:04.645"/>
+</branch>
+<branch type="ELSE IF" condition="'${browser}' == 'Chrome'">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Chamnado o ${browser}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20211031 14:27:04.645" endtime="20211031 14:27:04.645"/>
+</kw>
+<status status="PASS" starttime="20211031 14:27:04.645" endtime="20211031 14:27:04.645"/>
+</branch>
+<branch type="ELSE IF" condition="'${browser}' == 'webkit'">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Chamnado o ${browser}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20211031 14:27:04.645" endtime="20211031 14:27:04.645"/>
+</kw>
+<status status="NOT RUN" starttime="20211031 14:27:04.645" endtime="20211031 14:27:04.645"/>
+</branch>
+<branch type="ELSE">
+<kw name="Fail" library="BuiltIn">
+<arg>Navegador incorreto</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" starttime="20211031 14:27:04.645" endtime="20211031 14:27:04.645"/>
+</kw>
+<status status="NOT RUN" starttime="20211031 14:27:04.645" endtime="20211031 14:27:04.645"/>
+</branch>
+<status status="PASS" starttime="20211031 14:27:04.645" endtime="20211031 14:27:04.645"/>
+</if>
+<tag>browser</tag>
+<status status="PASS" starttime="20211031 14:27:04.644" endtime="20211031 14:27:04.645"/>
+</test>
+<doc>Trabalhando com condicionais</doc>
+<status status="PASS" starttime="20211031 14:27:04.637" endtime="20211031 14:27:04.646"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">browser</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Condicionais">Condicionais</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
